@@ -1,2 +1,124 @@
-this is a message from main
-modified
+1st ex
+mkdir Git_Lab_Experiment1
+cd Git_Lab_Experiment1
+git init
+ls
+ls -a
+git config --global user.name "Your Name"
+git config --global user.email "your_email@gmail.com"
+echo "This is my first Git experiment" > README.txt
+git status
+git add README.txt
+git status
+git commit -m "Initial commit"
+echo "Git tracks file changes" >> README.txt
+git status
+git add README.txt
+git commit -m "Updated README file"
+git log
+
+2nd ex
+1.	Initialize or Open a Git Repository
+o	Open the terminal.
+o	Navigate to the project directory.
+o	Initialize Git (if not already initialized):
+cd rep name
+o	git init
+o	git branch
+o	git branch feature-branch
+o	git checkout feature-branch
+o	git status
+o	git add .
+o	git commit -m "Added new feature in feature branch"
+o	git checkout main
+o	git add .
+o	git commit -m "Updated file in main branch"
+o	git merge feature-branch
+git mergetool
+o	git add <filename>
+o	git commit -m "i"
+o	git log --oneline
+o	git branch -d feature-branch
+
+3rd
+>>> git config --global user.name "Your Name"
+>>> git config --global user.email "your_email@example.com"
+●	Open https://github.com
+●	Sign in → Click New Repository
+●	Name it git-lab-demo
+●	Keep it public
+>>> cd Desktop
+>>> git clone https://github.com/YourUsername/git-lab-demo.git
+>>> cd git-lab-demo
+>>> git init
+>>> git remote add origin https://github.com/YourUsername/git-lab-demo.git
+touch main.txt
+notepad main.txt 
+git add .
+git commit
+>>> git push origin main
+>>> git push -u origin main
+●	Make a small change directly on GitHub (edit README.md online, e.g., add “Updated via GitHub”).
+●	Then on Git Bash:
+>>> git fetch origin
+>>> git merge origin/main
+(OR)
+>>> git pull origin main
+chech in file
+●	git fetch ◻ download the latest updates from GitHub but make no changes
+●	git pull ◻ git fetch + update changes to local repository
+●	This downloads the updated version from GitHub.
+
+4th ex
+1.Create a New Repository on GitHub
+1.	Login to GitHub
+2.	Click New Repository
+3.	Enter repository name (example: Git_PullRequests)
+4.	Select Public
+5.	Check Add README.md
+6.	Click Create Repository
+
+2. Clone Repository to Local System
+>>git clone <repository-url>
+>>cd Git_PullRequests
+touch file1.txt
+echo "This file is created in master branch" > file1.txt
+git status
+git add file1.txt
+git commit -m "Initial commit in master"
+git push origin main
+git pull origin main
+git branch feature-1
+git checkout feature-1
+echo "This change is from feature-1 branch" >> file1.txt
+touch feature.txt
+echo "Feature branch file" > feature.txt
+git status
+git add .
+git commit -m "Changes done in feature-1"
+git push origin feature-1
+Step 9: Create Pull Request (GitHub UI)
+1.	Open GitHub repository
+2.	Click Compare & Pull Request
+3.	Base branch → master
+4.	Compare branch → feature-1
+5.	Add description
+6.	Click Create Pull Request
+Step 10: Review Pull Request
+•	Reviewer checks code
+•	Approves changes
+Step 11: Merge Pull Request
+Click Merge Pull Request
+Confirm merge
+
+Merge Pull Request in GitHub means you are taking the changes from a feature branch (like feature-1) and combining them into the base branch (usually master or main).
+Step 12: Update Local Master After Merge
+git checkout master
+git pull origin master
+Step 13: Verify Commit History
+git log --oneline
+Step 14: Delete Feature Branch (Optional but Best Practice)
+Local:
+git branch -d feature-1
+Remote:
+git push origin --delete feature-1
