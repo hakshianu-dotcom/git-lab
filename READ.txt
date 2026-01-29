@@ -122,3 +122,39 @@ Local:
 git branch -d feature-1
 Remote:
 git push origin --delete feature-1
+
+5th
+
+haksh@anu MINGW64 ~ (master)
+$ git clone https://github.com/hakshianu-dotcom/git-lab-demo.git
+haksh@anu MINGW64 ~ (master)
+$ cd Git-lab-demo.git
+bash: cd: Git-lab-demo.git: No such file or directory
+$ cd git-lab-demo.git
+$ cd git-lab-demo
+$ ls
+
+$ git pull
+$ git tag v1.0
+$ git tag
+v1.0
+$ git tag -a v1.2 -m "v1.2 Tag Created"
+$ git tag
+v1.0
+v1.2
+$ git show v1.0
+$ git tag -l "v1.*"
+v1.0
+v1.2
+$ git push origin v1.0
+$ git tag v2.0
+$ git push --tags
+haksh@anu MINGW64 ~/git-lab-demo (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was a3cc554)
+
+haksh@anu MINGW64 ~/git-lab-demo (main)
+$ git push origin -d v1.0
+To https://github.com/hakshianu-dotcom/git-lab-demo.git
+ - [deleted]         v1.0
+
